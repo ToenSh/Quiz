@@ -1,0 +1,192 @@
+{
+  "categories": [
+    {
+      "name": "history",
+      "total": 9,
+      "questions": [
+        {
+          "title": "When did World War 2 start?",
+          "correct_answers": [1],
+          "answers": [
+            "September 1, 1978",
+            "September 1, 1939",
+            "September 1, 1980",
+            "September 1, 1981"
+          ],
+          "dificulty": "easy",
+          "type": "single"
+        },
+        {
+          "title": "When was the Declaration of Independence signed?",
+          "correct_answers": [0],
+          "answers": [
+            "August 2, 1776",
+            "July 1, 1939",
+            "December 22, 1980",
+            "September 1, 1981"
+          ],
+          "dificulty": "medium",
+          "type": "single"
+        },
+        {
+          "title": "When did the construction of the Great Wall of China begin?",
+          "correct_answers": [1],
+          "answers": [
+            "7th century BC",
+            "September 1, 1939",
+            "9th century AC",
+            "July 1, 1420"
+          ],
+          "dificulty": "hard",
+          "type": "single"
+        },
+        {
+          "title": "Who sent Christopher Columbus to explore the New World?",
+          "correct_answers": [0],
+          "answers": [
+            "King Ferdinand of Spain",
+            "King Charles of England",
+            "King of Portugal",
+            "The Pope"
+          ],
+          "dificulty": "easy",
+          "type": "single"
+        },
+        {
+          "title": "What is considered the largest empire in history?",
+          "correct_answers": [0, 3],
+          "answers": [
+            "The Mongol Empire",
+            "Ottoman Empire",
+            "British Empire",
+            "Roman Empire"
+          ],
+          "dificulty": "medium",
+          "type": "multiple"
+        },
+        {
+          "title": "What year did the French Revolution start?",
+          "correct_answers": [1],
+          "answers": ["1978", "1789", "1980", "1981"],
+          "dificulty": "medium",
+          "type": "single"
+        },
+        {
+          "title": "When did World War 1 start?",
+          "correct_answers": [1],
+          "answers": [
+            "September 1, 1978",
+            "July 28, 1914",
+            "August 1, 1980",
+            "January 15, 1981"
+          ],
+          "dificulty": "easy",
+          "type": "single"
+        },
+        {
+          "title": "Where did Albert Einstein live before moving to the United States?",
+          "correct_answers": [3],
+          "answers": ["Austria", "France", "Italy", "Germany"],
+          "dificulty": "hard",
+          "type": "single"
+        },
+        {
+          "title": "How old was Queen Elizabeth II when she was crowned the Queen of England?",
+          "correct_answers": [0],
+          "answers": ["27", "19", "44", "30"],
+          "dificulty": "hard",
+          "type": "single"
+        }
+      ]
+    },
+    {
+      "name": "sport",
+      "total": 9,
+      "questions": [
+        {
+          "title": "Which has won Europa League at least once?",
+          "correct_answers": [0, 1],
+          "answers": [
+            "Eintracht Frankfurt",
+            "Villarreal CF",
+            "FK Proleter",
+            "AC Milan"
+          ],
+          "dificulty": "easy",
+          "type": "multiple"
+        },
+        {
+          "title": "Who was the top scorer in the 2022/23 Premier League season?",
+          "correct_answers": [0],
+          "answers": ["Haaland", "Messi", "Benzema", "Salah"],
+          "dificulty": "medium",
+          "type": "single"
+        },
+        {
+          "title": "What is Usain Bolt's blistering 100m world record time?",
+          "correct_answers": [3],
+          "answers": ["6.22s", "8.5s", "14.99s", "9.58s"],
+          "dificulty": "hard",
+          "type": "single"
+        },
+        {
+          "title": "How many MMA fights has UFC star Conor McGregor lost during his career?",
+          "correct_answers": [3],
+          "answers": ["12", "8", "6", "4"],
+          "dificulty": "easy",
+          "type": "single"
+        },
+        {
+          "title": "Which two Formula 1 drivers have both won the BBC Sports Personality of the Year award twice?",
+          "correct_answers": [0, 2],
+          "answers": [
+            "Nigel Mansell",
+            "Carlos Sainz",
+            "Lewis Hamilton",
+            "Fernando Alonso"
+          ],
+          "dificulty": "medium",
+          "type": "multiple"
+        },
+        {
+          "title": "Who is the current captain of the England Women's Football team?",
+          "correct_answers": [1],
+          "answers": [
+            "Anna Martin",
+            "Leah Williamson",
+            "Maria Sloane",
+            "Joelle Smith"
+          ],
+          "dificulty": "hard",
+          "type": "single"
+        },
+        {
+          "title": "Which team are the current NBA champions?",
+          "correct_answers": [3],
+          "answers": [
+            "LA Lakers",
+            "Dallas Mavercis",
+            "Denver Broncos",
+            "Denver Nuggets"
+          ],
+          "dificulty": "medium",
+          "type": "single"
+        },
+        {
+          "title": "Where is the next Summer Olympic Games set to take place?",
+          "correct_answers": [0],
+          "answers": ["Paris", "Frankfurt", "Prague", "London"],
+          "dificulty": "easy",
+          "type": "single"
+        },
+        {
+          "title": "In which year did Roger Federer win his first Wimbledon title?",
+          "correct_answers": [2],
+          "answers": ["2005", "1999", "2003", "2020"],
+          "dificulty": "hard",
+          "type": "single"
+        }
+      ]
+    }
+  ]
+}
