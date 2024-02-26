@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Answer from './Answer';
+import { useNavigate } from 'react-router-dom';
 
 interface QuestionProps {
   title: string;
@@ -7,11 +8,10 @@ interface QuestionProps {
   correctAnswers: number[];
   setCurrentQuestion: React.Dispatch<React.SetStateAction<number>>;
   currentQuestion: number;
-  setQuizFinished: React.Dispatch<React.SetStateAction<boolean>>;
   totalQuestions: number;
   type: string;
   setScore: React.Dispatch<React.SetStateAction<number>>;
-  isQuizActive: boolean;
+  score: number;
 }
 export default function Question({
   title,
@@ -19,19 +19,21 @@ export default function Question({
   correctAnswers,
   setCurrentQuestion,
   currentQuestion,
-  setQuizFinished,
   totalQuestions,
   type,
+  score,
   setScore,
-  isQuizActive,
 }: QuestionProps) {
+  const navigate = useNavigate();
   const [selectedAnswers, setSelectedAnswers] = useState<string[]>([]);
 
   function handleScore() {
     if (
       type === 'single' &&
+      selectedAnswers.length === 1 &&
       answers[correctAnswers[0]] === selectedAnswers[0]
     ) {
+      console.log('SCORE INCREMENTED');
       setScore((prevScore) => prevScore + 1);
     } else if (
       type === 'multiple' &&
@@ -46,6 +48,11 @@ export default function Question({
     }
   }
 
+  function handleLastQuestion() {
+    handleScore();
+    setCurrentQuestion(0);
+  }
+
   const answerElements = answers.map((answer, index) => {
     const letter = String.fromCharCode(65 + index);
     return (
@@ -53,27 +60,16 @@ export default function Question({
         setSelectedAnswers={setSelectedAnswers}
         answer={answer}
         letter={letter}
+        selectedAnswers={selectedAnswers}
+        type={type}
       />
     );
   });
 
-  const sliderWidth = ((currentQuestion + 1) / totalQuestions) * 100 + '%';
-
   return (
-    <div className="flex flex-col border border-gray-400 rounded-xl py-8 px-12 gap-8 w-[500px]">
-      <div className="flex items-center gap-4">
-        <div className="bg-gray-300 w-full h-4 rounded-lg width-transition">
-          <div
-            className={`bg-indigo-700 h-4 rounded-lg`}
-            style={{ width: sliderWidth }}
-          ></div>
-        </div>
-        <span className="text-sm">
-          {currentQuestion + 1}/{totalQuestions}
-        </span>
-      </div>
+    <div className="flex flex-col gap-8 ">
       <div>
-        <span className="text-sm">Question Number</span>
+        <span className="text-sm">Question {currentQuestion + 1}</span>
         <h1 className="font-bold text-lg">{title}</h1>
       </div>
       <div className="flex flex-col gap-4">{answerElements}</div>
@@ -92,9 +88,9 @@ export default function Question({
           className=" bg-indigo-700 text-white font-bold py-2 text-xs px-10 rounded"
           onClick={() => {
             if (currentQuestion === totalQuestions - 1) {
-              setQuizFinished(true);
-              setCurrentQuestion(0);
-            } else if (isQuizActive) {
+              handleLastQuestion();
+              navigate('/result', { state: { score: score } });
+            } else {
               handleScore();
               setCurrentQuestion(
                 (prevCurrentQuestion) => prevCurrentQuestion + 1
